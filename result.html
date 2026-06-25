@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+            Student Grade Calculator
+        </div>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="result.html">Result</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="result-container">
+
+    <h2>Student Result</h2>
+
+    <div class="result-card">
+
+        <table>
+
+            <tr>
+                <th>Student Name</th>
+                <td id="studentName"></td>
+            </tr>
+
+            <tr>
+                <th>Roll Number</th>
+                <td id="rollNumber"></td>
+            </tr>
+
+            <tr>
+                <th>Total Marks</th>
+                <td id="totalMarks"></td>
+            </tr>
+
+            <tr>
+                <th>Average</th>
+                <td id="averageMarks"></td>
+            </tr>
+
+            <tr>
+                <th>Percentage</th>
+                <td id="percentage"></td>
+            </tr>
+
+            <tr>
+                <th>Grade</th>
+                <td id="grade"></td>
+            </tr>
+
+            <tr>
+                <th>Status</th>
+                <td id="status"></td>
+            </tr>
+
+        </table>
+
+        <div class="buttons">
+
+            <button onclick="window.print()">
+                Print Result
+            </button>
+
+            <button onclick="location.href='calculator.html'">
+                Back
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Student Grade Calculator | All Rights Reserved
+</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+
+document.getElementById("studentName").innerHTML =
+localStorage.getItem("name");
+
+document.getElementById("rollNumber").innerHTML =
+localStorage.getItem("roll");
+
+document.getElementById("totalMarks").innerHTML =
+localStorage.getItem("total");
+
+document.getElementById("averageMarks").innerHTML =
+localStorage.getItem("average");
+
+document.getElementById("percentage").innerHTML =
+localStorage.getItem("percentage") + "%";
+
+document.getElementById("grade").innerHTML =
+localStorage.getItem("grade");
+
+document.getElementById("status").innerHTML =
+localStorage.getItem("status");
+
+</script>
+
+</body>
+</html>

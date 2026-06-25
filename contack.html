@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Student Grade Calculator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+            Student Grade Calculator
+        </div>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="result.html">Result</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="contact-container">
+
+    <h1>Contact Us</h1>
+
+    <p>
+        Have any questions or suggestions? Fill out the form below and we'll get back to you.
+    </p>
+
+    <div class="contact-box">
+
+        <div class="contact-form">
+
+            <form id="contactForm">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="fullname"
+                    placeholder="Enter your full name"
+                    required>
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required>
+
+                <label>Subject</label>
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Enter subject"
+                    required>
+
+                <label>Message</label>
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Write your message here..."
+                    required></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+                <button type="reset">
+                    Reset
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="contact-info">
+
+            <h2>Contact Information</h2>
+
+            <p><strong>Email:</strong> support@studentgradecalculator.com</p>
+
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+
+            <p><strong>Address:</strong> Kerala, India</p>
+
+            <h3>Office Hours</h3>
+
+            <p>Monday - Friday</p>
+
+            <p>9:00 AM - 5:00 PM</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Student Grade Calculator | All Rights Reserved
+</p>
+
+</footer>
+
+<script>
+
+document.getElementById("contactForm").addEventListener("submit", function(event){
+
+event.preventDefault();
+
+alert("Thank you! Your message has been submitted successfully.");
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
