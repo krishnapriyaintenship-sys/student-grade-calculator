@@ -1,0 +1,321 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* Animated Background */
+
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+}
+
+body::before{
+    background:#7c3aed;
+    top:-150px;
+    left:-100px;
+    animation:move1 12s infinite alternate;
+}
+
+body::after{
+    background:#06b6d4;
+    bottom:-150px;
+    right:-100px;
+    animation:move2 14s infinite alternate;
+}
+
+@keyframes move1{
+    from{transform:translate(0,0);}
+    to{transform:translate(120px,80px);}
+}
+
+@keyframes move2{
+    from{transform:translate(0,0);}
+    to{transform:translate(-120px,-80px);}
+}
+
+/* Navigation */
+
+header{
+    width:100%;
+    padding:20px 8%;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+    position:sticky;
+    top:0;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    position:relative;
+}
+
+nav ul li a::after{
+    content:"";
+    width:0;
+    height:3px;
+    background:#38bdf8;
+    position:absolute;
+    bottom:-6px;
+    left:0;
+    transition:.4s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+/* Hero */
+
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    width:850px;
+    padding:60px;
+    text-align:center;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:25px;
+    box-shadow:0 0 40px rgba(0,255,255,.2);
+}
+
+.overlay h1{
+    font-size:60px;
+    margin-bottom:20px;
+    background:linear-gradient(90deg,#38bdf8,#22c55e,#f472b6);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.overlay p{
+    font-size:20px;
+    color:#ddd;
+    margin-bottom:40px;
+}
+
+/* Neon Button */
+
+button{
+
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:18px;
+    color:white;
+    background:linear-gradient(45deg,#2563eb,#7c3aed);
+    transition:.4s;
+    box-shadow:0 0 20px #7c3aed;
+
+}
+
+button:hover{
+
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 0 40px #38bdf8;
+
+}
+
+/* Cards */
+
+.cards{
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:70px;
+
+}
+
+.card{
+
+    width:300px;
+    padding:30px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    transition:.5s;
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+.card:hover{
+
+    transform:translateY(-15px) rotate(-2deg);
+
+}
+
+.card h3{
+
+    color:#38bdf8;
+    margin-bottom:15px;
+
+}
+
+/* Forms */
+
+.calculator,
+.result-container,
+.about-container,
+.contact-container{
+
+    width:90%;
+    max-width:950px;
+    margin:60px auto;
+    padding:40px;
+    background:rgba(255,255,255,.08);
+    border-radius:20px;
+    backdrop-filter:blur(20px);
+
+}
+
+input,
+textarea{
+
+    width:100%;
+    margin:15px 0;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#1e293b;
+    color:white;
+    font-size:16px;
+
+}
+
+input:focus,
+textarea:focus{
+
+    outline:none;
+    box-shadow:0 0 15px #38bdf8;
+
+}
+
+/* Tables */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+
+}
+
+th{
+
+    background:#2563eb;
+    padding:15px;
+
+}
+
+td{
+
+    background:#1e293b;
+    padding:15px;
+
+}
+
+tr:hover td{
+
+    background:#334155;
+
+}
+
+/* Footer */
+
+footer{
+
+    margin-top:80px;
+    padding:20px;
+    text-align:center;
+    background:#111827;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+nav{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+margin-top:20px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.overlay h1{
+
+font-size:38px;
+
+}
+
+.cards{
+
+padding:30px;
+
+}
+
+.card{
+
+width:100%;
+
+}
+
+}
